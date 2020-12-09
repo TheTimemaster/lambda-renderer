@@ -1,0 +1,16 @@
+{
+  "name": "lambda-renderer",
+  "version": "0.0.1",
+  "description": "Functional library for canvas animations. Heavily inspired by Haskell CodeWorld.",
+  "main": "build/index.js",
+  "types": "build/index.d.js",
+  "dependencies": {},
+  "devDependencies": {
+    "tslint": "^6.1.3"
+  },
+  "scripts": {
+    "prepublish": "tsc"
+  },
+  "author": "Piotr Kowalewski",
+  "license": "ISC"
+}
