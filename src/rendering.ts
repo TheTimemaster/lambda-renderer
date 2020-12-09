@@ -31,7 +31,7 @@ export const renderPicture = (ctx: CanvasRenderingContext2D, picture: Picture): 
             break;
         case PrimitiveType.CIRCLE:
             ctx.beginPath()
-            ctx.arc(0, 0 , 0.5, 0, Math.PI)
+            ctx.arc(0, 0 , 0.5, 0, 2 * Math.PI)
             ctx.fill()
             break;
         case PrimitiveType.SQUARE:
