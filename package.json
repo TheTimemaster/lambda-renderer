@@ -1,5 +1,5 @@
 {
-  "name": "lambda-renderer",
+  "name": "@thetimemaster/lambda-renderer",
   "version": "0.0.1",
   "description": "Functional library for canvas animations. Heavily inspired by Haskell CodeWorld.",
   "main": "build/index.js",
@@ -12,5 +12,13 @@
     "prepublish": "tsc"
   },
   "author": "Piotr Kowalewski",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheTimemaster/lambda-renderer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TheTimemaster/lambda-renderer/issues"
+  },
+  "homepage": "https://github.com/TheTimemaster/lambda-renderer#readme"
 }
