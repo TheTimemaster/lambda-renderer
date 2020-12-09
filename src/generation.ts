@@ -1,51 +1,68 @@
 import {
     Color,
-    ColoredPicture, CombinedPicture, Lettering,
+    ColoredPicture,
+    CombinedPicture,
+    Lettering,
     ModifiedPictureType,
-    Picture, PrimitiveType,
+    Picture,
+    PrimitiveType,
     RotatedPicture,
-    ScaledPicture, SpecialPictureType,
-    TranslatedPicture
-} from "./picture";
+    ScaledPicture,
+    SpecialPictureType,
+    TranslatedPicture,
+} from './picture';
 
 export const translated = (x: number, y: number, base: Picture): TranslatedPicture => ({
     type: ModifiedPictureType.TRANSLATED,
-    x, y, base
+    x,
+    y,
+    base,
 });
 
 export const rotated = (rotation: number, base: Picture): RotatedPicture => ({
     type: ModifiedPictureType.ROTATED,
-    rotation, base
+    rotation,
+    base,
 });
 
 export const scaled = (xScale: number, yScale: number, base: Picture): ScaledPicture => ({
     type: ModifiedPictureType.SCALED,
-    xScale, yScale, base
+    xScale,
+    yScale,
+    base,
 });
 
 export const colored = (color: Color, base: Picture): ColoredPicture => ({
     type: ModifiedPictureType.COLORED,
-    color, base
+    color,
+    base,
 });
 
 export const combined = (first: Picture, second: Picture): CombinedPicture => ({
     type: ModifiedPictureType.COMBINED,
-    first, second
+    first,
+    second,
 });
 
 export const circle = {
-    type: PrimitiveType.CIRCLE
-}
+    type: PrimitiveType.CIRCLE,
+};
 
-export const lettering = (text: string, align: CanvasTextAlign = 'center', fontName: string = 'Calibri'): Lettering => ({
+export const lettering = (
+    text: string,
+    align: CanvasTextAlign = 'center',
+    fontName: string = 'Calibri',
+): Lettering => ({
     type: SpecialPictureType.LETTERING,
-    text, align, fontName: `1px ${fontName}`
+    text,
+    align,
+    fontName: `1px ${fontName}`,
 });
 
 export const square = {
-    type: PrimitiveType.SQUARE
-}
+    type: PrimitiveType.SQUARE,
+};
 
 export const blank = {
-    type: PrimitiveType.BLANK
-}
+    type: PrimitiveType.BLANK,
+};

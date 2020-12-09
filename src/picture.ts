@@ -1,6 +1,6 @@
 export enum PrimitiveType {
-    SQUARE= 0,
-    CIRCLE= 1,
+    SQUARE = 0,
+    CIRCLE = 1,
     BLANK = 2,
 }
 
@@ -9,7 +9,7 @@ export enum ModifiedPictureType {
     COLORED = 101,
     TRANSLATED = 102,
     ROTATED = 103,
-    SCALED= 104
+    SCALED = 104,
 }
 
 export enum SpecialPictureType {
@@ -19,62 +19,65 @@ export enum SpecialPictureType {
 export type Color = string;
 
 export type CombinedPicture = {
-    type: ModifiedPictureType.COMBINED,
-    first: Picture,
-    second: Picture
-}
+    type: ModifiedPictureType.COMBINED;
+    first: Picture;
+    second: Picture;
+};
 
 export type Square = {
-    type: PrimitiveType.SQUARE
-}
+    type: PrimitiveType.SQUARE;
+};
 
 export type Circle = {
-    type: PrimitiveType.CIRCLE
-}
+    type: PrimitiveType.CIRCLE;
+};
 
 export type Blank = {
-    type: PrimitiveType.BLANK
-}
+    type: PrimitiveType.BLANK;
+};
 
 export type Lettering = {
-    type: SpecialPictureType.LETTERING
-    text: string,
-    fontName: string,
-    align: CanvasTextAlign
-}
+    type: SpecialPictureType.LETTERING;
+    text: string;
+    fontName: string;
+    align: CanvasTextAlign;
+};
 
 export type ColoredPicture = {
-    type: ModifiedPictureType.COLORED
-    color: Color
-    base: Picture
-}
+    type: ModifiedPictureType.COLORED;
+    color: Color;
+    base: Picture;
+};
 
 export type ScaledPicture = {
-    type: ModifiedPictureType.SCALED,
-    xScale: number,
-    yScale: number
-    base: Picture
-}
+    type: ModifiedPictureType.SCALED;
+    xScale: number;
+    yScale: number;
+    base: Picture;
+};
 
 export type RotatedPicture = {
-    type: ModifiedPictureType.ROTATED,
-    rotation: number,
-    base: Picture
-}
+    type: ModifiedPictureType.ROTATED;
+    rotation: number;
+    base: Picture;
+};
 
 export type TranslatedPicture = {
-    type: ModifiedPictureType.TRANSLATED,
-    x: number,
-    y: number,
-    base: Picture
-}
+    type: ModifiedPictureType.TRANSLATED;
+    x: number;
+    y: number;
+    base: Picture;
+};
 
 export type Primitive = Square | Circle | Blank;
 
 export type SpecialPicture = Lettering;
 
-export type Picture = CombinedPicture | Primitive | ColoredPicture | RotatedPicture | ScaledPicture | TranslatedPicture | SpecialPicture;
-
-
-
-
+export type Picture =
+    | CombinedPicture
+    | Primitive
+    | ColoredPicture
+    | RotatedPicture
+    | ScaledPicture
+    | TranslatedPicture
+    | SpecialPicture;
