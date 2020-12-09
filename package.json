@@ -6,10 +6,20 @@
   "types": "build/index.d.js",
   "dependencies": {},
   "devDependencies": {
-    "tslint": "^6.1.3"
+    "prettier": "^2.2.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.1.2"
   },
   "scripts": {
-    "prepublish": "tsc"
+    "build": "tsc",
+    "lint": "tslint -p tsconfig.json",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "author": "Piotr Kowalewski",
   "license": "ISC",
@@ -17,6 +27,9 @@
     "type": "git",
     "url": "git+https://github.com/TheTimemaster/lambda-renderer.git"
   },
+  "files": [
+    "build/**/*"
+  ],
   "bugs": {
     "url": "https://github.com/TheTimemaster/lambda-renderer/issues"
   },
