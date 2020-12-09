@@ -1,7 +1,7 @@
 import {colored, combined, lettering, rotated, scaled, square, translated} from "./generation";
 
 
-export const myAnim = (t: number) => translated(Math.sin(t) * 200, 0, combined(
+export const myAnim = (t: number) => translated(250 + Math.sin(t) * 200, 250, combined(
     combined(
         scaled(5, 500, colored("blue", square)),
         scaled(500, 5, colored("blue", square))
