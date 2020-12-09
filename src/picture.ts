@@ -38,7 +38,9 @@ export type Blank = {
 
 export type Lettering = {
     type: SpecialPictureType.LETTERING
-    text: string
+    text: string,
+    fontName: string,
+    align: CanvasTextAlign
 }
 
 export type ColoredPicture = {

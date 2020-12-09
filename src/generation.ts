@@ -37,9 +37,9 @@ export const circle = {
     type: PrimitiveType.CIRCLE
 }
 
-export const lettering = (text: string): Lettering => ({
+export const lettering = (text: string, align: CanvasTextAlign = 'center', fontName: string = 'Calibri'): Lettering => ({
     type: SpecialPictureType.LETTERING,
-    text
+    text, align, fontName: `1px ${fontName}`
 });
 
 export const square = {

@@ -38,6 +38,8 @@ export const renderPicture = (ctx: CanvasRenderingContext2D, picture: Picture): 
             ctx.fillRect(-0.5, -0.5, 1, 1)
             break;
         case SpecialPictureType.LETTERING:
+            ctx.font = picture.fontName;
+            ctx.textAlign = picture.align;
             ctx.fillText(picture.text, 0, 0)
             break;
     }
